@@ -1,36 +1,100 @@
 <!doctype html>
+
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="../node_modules/onsenui/css/onsenui.css"/>
     <link rel="stylesheet" href="../node_modules/onsenui/css/onsen-css-components.css"/>
+    <link rel="stylesheet" href="../sample/css/sampleapp.css"/>
+    
     <script src="../node_modules/onsenui/js/onsenui.js"></script>
+    
+      <link rel="stylesheet" href="../node_modules/onsenui/css/onsen-css-components-blue-basic-theme.css">
+    <script src="../sample/js/bind.js"></script>
   </head>
 
   <body>
-    <ons-page>
-  <ons-toolbar>
-    <div class="left">
-      <ons-back-button onclick="alert('Do you Wnat to skip ')">Back</ons-back-button>
+  
+  <ons-navigator id ="myNavigator" page= "login.html"></ons-navigator>
+   
+
+
+
+
+<ons-template id="login.html">
+  
+  <ons-page id="login">
+    
+    <ons-toolbar>
+      
+      <div class="center">Login Page</div>
+    </ons-toolbar>
+
+    <div align="center" top = "200px">
+      
+          <p><ons-input class="logininput" modifier="underbar" type="text" placeholder="User Name" ></ons-input></p>
+      
+          <p><ons-input class="logininput" modifier="underbar" type="password" placeholder="User Password" > </ons-input></p>
+      
+          <p><ons-button id="login">Sign-In</ons-button>
+ 
+          <ons-button id="register">Sign-Up</ons-button></p> 
+      
+        
+        
+
+      
     </div>
+
+  </ons-page>
+  
+  
+  
+</ons-template >
+
+
+
+
+
+<ons-template id="registration.html">
+  
+  <ons-page id="register">
     
     
-    <div class="center">MyPage</div>
     
-    <div class="right">
-      <ons-toolbar-button>
-        <ons-icon icon="md-menu"></ons-icon>
-      </ons-toolbar-button>
+      <ons-toolbar>
+      
+     <div align="left"><ons-back-button>Back</ons-back-button></div>
+      <div class="center"></div>
+   
+   
+      <div align="left">Register Page</div>
+    
+    
+    </ons-toolbar>
+   
+    <div align="center" top = "200px">
+      
+          <p><ons-input class="logininput" modifier="underbar" type="text" placeholder="User Name" ></ons-input></p>
+      
+          <p><ons-input class="logininput" modifier="underbar" type="text" placeholder="User Mobile Number" > </ons-input></p>
+      
+            <p><ons-input class="logininput" modifier="underbar" type="text" placeholder="User Email" ></ons-input></p>
+        
+          <p><ons-input class="logininput" modifier="underbar" type="text" placeholder="User Password" ></ons-input></p>
+    
+    
+     <p><ons-button id="login">Save</ons-button>
+ 
+<ons-button id="register">Cancel</ons-button></p> 
+      
+      
     </div>
-  </ons-toolbar>
 
-
- <div style="text-align: center; margin-top: 200px; color:black;">
-    <p><ons-input type="text" placeholder="Username" float></ons-input></p>
-    <p><ons-input type="password" placeholder="Password" float></ons-input></p>
-    <p><ons-button>Sign in</ons-button></p>
-  </div>
-
-</ons-page>
+  </ons-page>
+</ons-template >
+  
+ 
+  
   </body>
 </html>
